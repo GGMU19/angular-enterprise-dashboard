@@ -1,0 +1,9 @@
+# Ignore build artifacts and dependencies
+node_modules
+dist
+.angular
+coverage
+
+# Ignore generated files
+*.log
+.DS_Store

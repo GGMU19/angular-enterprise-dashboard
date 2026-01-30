@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Import custom variables and mixins
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// Global utility classes
+.flex-center {
+  @include flex-center;
+}
+
+.flex-column {
+  @include flex-column;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+// Screen reader only (accessibility)
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

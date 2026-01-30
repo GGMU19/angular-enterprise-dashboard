@@ -1,0 +1,29 @@
+// Custom SCSS Variables
+$primary-color: #1976d2;
+$accent-color: #dc004e;
+$warn-color: #f44336;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Breakpoints (Material Design)
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 960px;
+$breakpoint-desktop: 1280px;
+$breakpoint-large: 1920px;
+
+// Typography
+$font-family-base: 'Roboto', 'Helvetica Neue', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+
+// Z-index layers
+$z-index-dropdown: 1000;
+$z-index-modal: 1050;
+$z-index-tooltip: 1100;
