@@ -16,6 +16,11 @@ export const routes: Routes = [
     loadChildren: () => import('./features/forms/forms.routes').then(m => m.FORMS_ROUTES)
   },
   {
+    path: 'workflow',
+    loadComponent: () =>
+      import('./features/workflow/project-wizard.component').then(m => m.ProjectWizardComponent)
+  },
+  {
     path: '**',
     redirectTo: '/dashboard'
   }
