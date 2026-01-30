@@ -1,0 +1,86 @@
+.dynamic-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.form-header {
+  margin-bottom: 24px;
+
+  h2 {
+    margin: 0 0 8px 0;
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .form-description {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.form-progress {
+  margin-bottom: 24px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+  button mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.layout-horizontal .form-content app-form-section ::ng-deep .section-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.layout-grid .form-content app-form-section ::ng-deep .section-fields {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+
+  .form-field {
+    grid-column: span var(--cols, 12);
+  }
+}
+
+@media (max-width: 768px) {
+  .dynamic-form {
+    padding: 16px;
+  }
+
+  .form-header h2 {
+    font-size: 24px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .layout-horizontal .form-content app-form-section ::ng-deep .section-fields,
+  .layout-grid .form-content app-form-section ::ng-deep .section-fields {
+    grid-template-columns: 1fr;
+  }
+}

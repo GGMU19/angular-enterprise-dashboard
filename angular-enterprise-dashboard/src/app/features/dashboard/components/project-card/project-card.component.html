@@ -1,0 +1,72 @@
+<mat-card class="project-card" [class.selected]="selected">
+  <mat-card-header>
+    <mat-card-title>{{ project.name }}</mat-card-title>
+    <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="card-content">
+      <!-- Status Chip -->
+      <div class="status-section">
+        <mat-chip [class]="'status-chip status-' + project.status">
+          {{ getStatusLabel(project.status) }}
+        </mat-chip>
+        <span class="team-size">
+          <mat-icon>people</mat-icon>
+          {{ project.teamMembers.length }} members
+        </span>
+      </div>
+
+      <!-- Progress Section -->
+      <div class="progress-section">
+        <div class="progress-header">
+          <span class="progress-label">Progress</span>
+          <span class="progress-value">{{ project.progress }}%</span>
+        </div>
+        <mat-progress-bar
+          mode="determinate"
+          [value]="project.progress"
+          [color]="getProgressColor(project.progress)"
+        >
+        </mat-progress-bar>
+      </div>
+
+      <!-- Budget Info -->
+      <div class="budget-info">
+        <div class="budget-item">
+          <mat-icon>account_balance_wallet</mat-icon>
+          <span>Budget: ${{ project.budget | number: '1.0-0' }}</span>
+        </div>
+        <div class="budget-item">
+          <mat-icon>monetization_on</mat-icon>
+          <span>Spent: ${{ project.spent | number: '1.0-0' }}</span>
+        </div>
+      </div>
+
+      <!-- Dates -->
+      <div class="dates">
+        <div class="date-item">
+          <mat-icon>event</mat-icon>
+          <span
+            >{{ project.startDate | date: 'shortDate' }} -
+            {{ project.endDate | date: 'shortDate' }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button mat-button color="primary" (click)="onView($event)">
+      <mat-icon>visibility</mat-icon>
+      View
+    </button>
+    <button mat-button color="accent" (click)="onEdit($event)">
+      <mat-icon>edit</mat-icon>
+      Edit
+    </button>
+    <button mat-icon-button color="warn" (click)="onDelete($event)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

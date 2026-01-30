@@ -1,9 +1,10 @@
 import { ActionReducerMap } from '@ngrx/store';
 import { AppState } from './app.state';
+import { dashboardReducer } from '../features/dashboard/store/dashboard.reducer';
 
 // Root Reducer Map
-// Feature reducers will be registered here
+// Feature reducers are registered here
 export const appReducers: ActionReducerMap<AppState> = {
-  // Feature reducers will be added here
-  // Example: dashboard: dashboardReducer
+  dashboard: dashboardReducer
+  // Future feature reducers will be added here
 };

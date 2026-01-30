@@ -1,0 +1,142 @@
+.project-card {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-card.selected {
+  border: 2px solid #1976d2;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.status-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.status-chip.status-planning {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-chip.status-active {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-chip.status-on-hold {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-chip.status-completed {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.status-chip.status-cancelled {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.team-size {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.team-size mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-label {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.progress-value {
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.budget-info {
+  display: flex;
+  gap: 16px;
+}
+
+.budget-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.budget-item mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: #1976d2;
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.date-item mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+mat-card-actions {
+  margin-top: auto;
+}

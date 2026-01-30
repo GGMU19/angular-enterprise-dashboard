@@ -6,6 +6,7 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 import { routes } from './app.routes';
 import { appReducers } from './store/app.reducer';
+import { DashboardEffects } from './features/dashboard/store/dashboard.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,8 +14,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     // NgRx Store Configuration
     provideStore(appReducers),
-    // NgRx Effects (for side effects like API calls)
-    provideEffects([]),
+    // NgRx Effects (register feature effects here)
+    provideEffects([DashboardEffects]),
     // NgRx DevTools (Redux DevTools for debugging)
     provideStoreDevtools({
       maxAge: 25, // Retains last 25 states
